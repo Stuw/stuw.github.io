@@ -2,3 +2,9 @@ theme: jekyll-theme-cayman
 title: Безопасность для всех
 description: Еженедельный подкаст о безопасности для пользователей и разработчиков
 timezone: Europe/Moscow
+owner: "Андрей Данин"
+email: "danindrey@mail.ru"
+podcast:
+    image: "/assets/images/podcast.jpg"
+    subtitle: "Информационно-развлекательный подкаст о безопасности"
+    copyright: "2018 Андрей Данин"
