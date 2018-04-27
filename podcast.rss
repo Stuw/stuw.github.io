@@ -1,0 +1,54 @@
+---
+layout: rss
+---
+<?xml version="1.0" encoding="utf-8"?>
+<rss xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" xml:lang="ru" version="2.0" xmlns:atom="http://www.w3.org/2005/Atomi" xmlns:media="http://search.yahoo.com/mrss/">
+<channel>
+	<title>{{ site.title }}</title>
+	<link>{{ site.url }}</link>
+	<atom:link href="{{ site.url }}/podcast.rss" rel="self" type="application/rss+xml" />
+	<description>{{ site.description }}</description>
+	<generator></generator>
+	<language>ru-RU</language>
+	<copyright>{{ site.podcast.copyright }}</copyright>
+	<image>
+		<url>{{ site.url }}{{ site.podcast.image }}</url>
+		<title>{{ site.title }}</title>
+		<link>{{ site.url }}</link>
+	</image>
+	<itunes:subtitle>{{ site.podcast.subtitle }}</itunes:subtitle>
+	<itunes:type>episodic</itunes:type>
+	<itunes:image href="{{ site.url }}{{ site.podcast.image }}" />
+	<itunes:summary>{{ site.description }}</itunes:summary>
+	<itunes:author>{{ site.owner }}</itunes:author>
+	<itunes:owner>
+		<itunes:name>{{ site.owner }}</itunes:name>
+		<itunes:email>{{ site.email }}</itunes:email>
+	</itunes:owner>
+	<itunes:explicit>clean</itunes:explicit>
+	<itunes:category text="Technology"></itunes:category>
+	
+{% for post in site.posts %}
+	<item>
+		<title>{{ post.title }}</title>
+		<itunes:title>{{ post.title }}</itunes:title>
+		<itunes:subtitle>{{ post.subtitle }}</itunes:subtitle>
+		<itunes:summary><![CDATA[{{post.htmldescr }}]]></itunes:summary>
+		<description><![CDATA[{{post.htmldescr }}]]></description>
+		<itunes:episodeType>full</itunes:episodeType>
+		<link>{{ site.url }}{{ post.url }}</link>
+		<enclosure url="{{ site.url }}/assets/audio/{{ post.mp3file }}" length="{{ post.mp3size }}" type="audio/mpeg"/>
+		<guid isPermaLink="false">{{ post.id }}</guid>
+		<pubDate>{{ post.date }}</pubDate>
+		<itunes:duration>{{ post.mp3duration }}</itunes:duration>
+		<itunes:image href="{{ site.url }}{{ post.image | default: site.podcast.image }}" />
+		<author>{{ post.email | default: site.email }} ({{ post.author | default: site.owner }})</author>
+		<itunes:author>{{ post.author | default: site.owner }}</itunes:author>
+		<itunes:keywords>{{ post.keywords }}</itunes:keywords>
+		<itunes:explicit>no</itunes:explicit>
+		<pubDate>{{ post.date | date: "%d %b %Y %H:%M:%S %z" }}</pubDate>
+	</item>
+{% endfor %}
+			
+</channel>
+</rss>
