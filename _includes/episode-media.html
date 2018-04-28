@@ -1,2 +1,2 @@
-<p><a href="/assets/audio/{{ include.file }}" download="{{ include.file }}">Скачать эпизод</a></p>
-<p><audio controls><source src="/assets/audio/{{ include.file }}"></audio></p>
+<p><a href="/assets/audio/{{ include.file | uri_escape }}" download="{{ include.file }}">Скачать эпизод</a></p>
+<p><audio controls><source src="/assets/audio/{{ include.file | uri_escape }}"></audio></p>

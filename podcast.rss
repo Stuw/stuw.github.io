@@ -12,13 +12,13 @@ layout: rss
 	<language>ru-RU</language>
 	<copyright>{{ site.podcast.copyright }}</copyright>
 	<image>
-		<url>{{ site.url }}{{ site.podcast.image }}</url>
+		<url>{{ site.url }}{{ site.podcast.image | uri_escape }}</url>
 		<title>{{ site.title }}</title>
 		<link>{{ site.url }}</link>
 	</image>
 	<itunes:subtitle>{{ site.podcast.subtitle }}</itunes:subtitle>
 	<itunes:type>episodic</itunes:type>
-	<itunes:image href="{{ site.url }}{{ site.podcast.image }}" />
+	<itunes:image href="{{ site.url }}{{ site.podcast.image | uri_escape }}" />
 	<itunes:summary>{{ site.description }}</itunes:summary>
 	<itunes:author>{{ site.owner }}</itunes:author>
 	<itunes:owner>
@@ -36,17 +36,17 @@ layout: rss
 		<itunes:summary><![CDATA[{{post.htmldescr }}]]></itunes:summary>
 		<description><![CDATA[{{post.htmldescr }}]]></description>
 		<itunes:episodeType>full</itunes:episodeType>
-		<link>{{ site.url }}{{ post.url }}</link>
-		<enclosure url="{{ site.url }}/assets/audio/{{ post.mp3file }}" length="{{ post.mp3size }}" type="audio/mpeg"/>
+		<link>{{ site.url }}{{ post.url | uri_escape }}</link>
+		<enclosure url="{{ site.url }}/assets/audio/{{ post.mp3file | uri_escape }}" length="{{ post.mp3size }}" type="audio/mpeg"/>
 		<guid isPermaLink="false">{{ post.id }}</guid>
 		<pubDate>{{ post.date }}</pubDate>
 		<itunes:duration>{{ post.mp3duration }}</itunes:duration>
-		<itunes:image href="{{ site.url }}{{ post.image | default: site.podcast.image }}" />
+		<itunes:image href="{{ site.url }}{{ post.image | default: site.podcast.image | uri_escape }}" />
 		<author>{{ post.email | default: site.email }} ({{ post.author | default: site.owner }})</author>
 		<itunes:author>{{ post.author | default: site.owner }}</itunes:author>
 		<itunes:keywords>{{ post.keywords }}</itunes:keywords>
 		<itunes:explicit>no</itunes:explicit>
-		<pubDate>{{ post.date | date: "%d %b %Y %H:%M:%S %z" }}</pubDate>
+		<pubDate>{{ post.date | date_to_rfc822 }}</pubDate>
 	</item>
 {% endfor %}
 			
