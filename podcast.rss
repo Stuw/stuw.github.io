@@ -7,7 +7,7 @@ layout: rss
 	<title>{{ site.title }}</title>
 	<link>{{ site.url }}</link>
 	<atom:link href="{{ site.url }}/podcast.rss" rel="self" type="application/rss+xml" />
-	<description>{{ site.description }}</description>
+	<description>{{ site.podcast.subtitle }}</description>
 	<generator></generator>
 	<language>ru-RU</language>
 	<copyright>{{ site.podcast.copyright }}</copyright>
@@ -16,10 +16,10 @@ layout: rss
 		<title>{{ site.title }}</title>
 		<link>{{ site.url }}</link>
 	</image>
-	<itunes:subtitle>{{ site.podcast.subtitle }}</itunes:subtitle>
+	<itunes:subtitle>{{ site.description }}</itunes:subtitle>
 	<itunes:type>episodic</itunes:type>
 	<itunes:image href="{{ site.url }}{{ site.podcast.image | uri_escape }}" />
-	<itunes:summary>{{ site.description }}</itunes:summary>
+	<itunes:summary>{{ site.podcast.subtitle }}</itunes:summary>
 	<itunes:author>{{ site.owner }}</itunes:author>
 	<itunes:owner>
 		<itunes:name>{{ site.owner }}</itunes:name>
