@@ -11,8 +11,8 @@ title: "Еженедельный подкаст об информационно�
 ## Список выпусков
 
 {% for post in site.posts %}
-<h3>{{ post.title }} - {{ post.rudate }} - <a href="{{ post.url }}">{{ post.subtitle }}</a></h3>
+<h3>{{ post.number }}. {{ post.title }} - {{ post.rudate }} - <a href="{{ post.url }}">{{ post.subtitle }}</a></h3>
 {% include episode-media.html file=post.mp3file %}
-{{ post.htmldescr }}
+{{ post.excerpt }}
 <a href="{{ post.url }}" >подробнее...</a>
 {% endfor %}

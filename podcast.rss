@@ -30,11 +30,11 @@ layout: rss
 	
 {% for post in site.posts %}
 	<item>
-		<title>{{ post.title }}</title>
-		<itunes:title>{{ post.title }}</itunes:title>
+		<title>{{ post.number }}. {{ post.title }}</title>
+		<itunes:title>{{ post.number }}. {{ post.title }}</itunes:title>
 		<itunes:subtitle>{{ post.subtitle }}</itunes:subtitle>
-		<itunes:summary><![CDATA[{{post.htmldescr }}]]></itunes:summary>
-		<description><![CDATA[{{post.htmldescr }}]]></description>
+		<itunes:summary><![CDATA[{{ post.excerpt }}]]></itunes:summary>
+		<description><![CDATA[{{post.excerpt }}]]></description>
 		<itunes:episodeType>full</itunes:episodeType>
 		<link>{{ site.url }}{{ post.url | uri_escape }}</link>
 		<enclosure url="{{ site.url }}/assets/audio/{{ post.mp3file | uri_escape }}" length="{{ post.mp3size }}" type="audio/mpeg"/>
