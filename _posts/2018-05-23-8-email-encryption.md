@@ -3,7 +3,6 @@ number: 8
 title: "Шифрование e-mail"
 subtitle: "PGP и S/MIME"
 date: "2018-05-23 23:00:00"
-rudate: "23 мая 2018"
 keywords: "PGP, GPG, GnuPG, S/MIME"
 mp3file: "Безопасность для всех - 8 - 2018.05.23.mp3"
 mp3size: "9094096"
