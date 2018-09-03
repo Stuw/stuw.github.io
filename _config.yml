@@ -9,3 +9,7 @@ podcast:
     subtitle: "Информационно-развлекательный подкаст о безопасности. Свежие новости и полезная информация."
     copyright: "2018 Андрей Данин"
 excerpt_separator: <!--more-->
+
+url: "https://stuw.github.io"
+plugins:
+  - jekyll-sitemap
