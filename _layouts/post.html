@@ -16,9 +16,13 @@
     </section>
 
     <section class="main-content">
+      {% include share_buttons.html class="right" %}
+
       {% include episode-head.html %}
 
       {{ content }}
+
+      {% include share_buttons.html %}
 
       <footer class="site-footer">
         {% if site.github.is_project_page %}

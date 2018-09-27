@@ -5,7 +5,6 @@ audio {
 }
 
 .links {
-	float: right;
 
 	a {
 		color: #282828;
@@ -15,4 +14,12 @@ audio {
 	a:hover {
 		opacity: 1.0;
 	}
+}
+
+.none {
+	display: none;
+}
+
+.right {
+	float: right;
 }
