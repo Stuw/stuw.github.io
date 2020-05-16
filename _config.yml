@@ -6,8 +6,8 @@ owner: "Андрей Данин"
 email: "danindrey@mail.ru"
 podcast:
     image: "/assets/images/podcast_1400.jpg"
-    subtitle: "Информационно-развлекательный подкаст о безопасности. Свежие новости и полезная информация."
-    copyright: "2018 Андрей Данин"
+    subtitle: "Подкаст о технологиях и новостях из мира информационной безопасности."
+    copyright: "2018-2020 Андрей Данин"
 excerpt_separator: <!--more-->
 
 url: "https://stuw.github.io"
