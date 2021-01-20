@@ -11,5 +11,7 @@ podcast:
 excerpt_separator: <!--more-->
 
 url: "https://stuw.github.io"
+paginate: 8
 plugins:
   - jekyll-sitemap
+  - jekyll-paginate
