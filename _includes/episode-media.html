@@ -1,2 +1,2 @@
-<p><a href="/assets/audio/{{ include.file | uri_escape }}" download="{{ include.file }}">Скачать эпизод</a></p>
-<p><audio controls preload="metadata"><source src="/assets/audio/{{ include.file | uri_escape }}"></audio></p>
+<!--<a class="media-download" target="_blank" href="/assets/audio/{{ include.file | uri_escape }}" download="{{ include.file }}"><i class="fas fa-download fa-2x download-media"></i></a>-->
+<audio controls preload="metadata"><source src="/assets/audio/{{ include.file | uri_escape }}"></audio>
